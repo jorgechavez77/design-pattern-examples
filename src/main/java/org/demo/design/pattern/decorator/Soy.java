@@ -2,16 +2,20 @@ package org.demo.design.pattern.decorator;
 
 public class Soy extends CondimentDecorator {
 
+	private Beverage beverage;
+
+	public Soy(Beverage beverage) {
+		this.beverage = beverage;
+	}
+
 	@Override
 	public String getDescription() {
-		// TODO Auto-generated method stub
-		return null;
+		return beverage.getDescription() + ", Soy";
 	}
 
 	@Override
 	public double cost() {
-		// TODO Auto-generated method stub
-		return 0;
+		return 0.15 + beverage.cost();
 	}
 
 }
