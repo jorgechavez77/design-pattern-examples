@@ -1,5 +1,5 @@
 package org.demo.design.pattern.factory;
 
-public class PlumTomatoSauce extends Sauce {
+public class PlumTomatoSauce implements Sauce {
 
 }

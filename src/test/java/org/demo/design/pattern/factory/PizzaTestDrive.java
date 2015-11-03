@@ -1,5 +1,8 @@
 package org.demo.design.pattern.factory;
 
+import org.demo.design.pattern.factory.factorymethod.ChicagoPizzaStore;
+import org.demo.design.pattern.factory.factorymethod.NewYorkPizzaStore;
+import org.demo.design.pattern.factory.factorymethod.PizzaStore;
 import org.junit.Test;
 
 public class PizzaTestDrive {

@@ -1,5 +1,5 @@
 package org.demo.design.pattern.factory;
 
-public class FrozenClam extends Clams {
+public class FrozenClam implements Clams {
 
 }

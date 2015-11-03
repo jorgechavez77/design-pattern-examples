@@ -1,5 +1,7 @@
 package org.demo.design.pattern.factory;
 
+import org.demo.design.pattern.factory.abstractfactory.PizzaIngredientFactory;
+
 public class PepperoniPizza extends Pizza {
 
 	PizzaIngredientFactory ingredientFactory;
@@ -8,7 +10,7 @@ public class PepperoniPizza extends Pizza {
 		this.ingredientFactory = ingredientFactory;
 	}
 
-	@Override
+	public @Override
 	void prepare() {
 		// TODO Auto-generated method stub
 

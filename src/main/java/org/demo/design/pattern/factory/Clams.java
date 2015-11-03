@@ -1,5 +1,5 @@
 package org.demo.design.pattern.factory;
 
-public class Clams {
+public interface Clams {
 
 }

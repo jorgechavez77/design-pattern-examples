@@ -16,7 +16,7 @@ public abstract class Pizza {
 
 	List<String> toppins = new ArrayList<>();
 
-	abstract void prepare();
+	public abstract void prepare();
 
 	public void bake() {
 		System.out.println("Bake for 25 minutes at 350");

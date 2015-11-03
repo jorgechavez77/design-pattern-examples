@@ -1,5 +1,7 @@
 package org.demo.design.pattern.factory;
 
+import org.demo.design.pattern.factory.abstractfactory.PizzaIngredientFactory;
+
 public class CheesePizza extends Pizza {
 
 	PizzaIngredientFactory ingredientFactory;
@@ -9,7 +11,7 @@ public class CheesePizza extends Pizza {
 	}
 
 	@Override
-	void prepare() {
+	public void prepare() {
 		System.out.println("Preparing " + name);
 		dough = ingredientFactory.createDough();
 		sauce = ingredientFactory.createSauce();
