@@ -5,19 +5,20 @@ public class ChicagoPizzaStore extends PizzaStore {
 	@Override
 	public Pizza createPizza(String type) {
 		Pizza pizza = null;
+		PizzaIngredientFactory ingredientFactory = new ChicagoPizzaIngredientFactory();
 
 		switch (type) {
 		case "cheese":
-			pizza = new ChicagoStyleCheesePizza();
+			pizza = new CheesePizza(ingredientFactory);
 			break;
 		case "pepperoni":
-			pizza = new ChicagoStylePepperoniPizza();
+			pizza = new PepperoniPizza(ingredientFactory);
 			break;
 		case "clam":
-			pizza = new ChicagoStyleClamPizza();
+			pizza = new ClamPizza(ingredientFactory);
 			break;
 		case "veggie":
-			pizza = new ChicagoStyleVeggiePizza();
+			pizza = new VeggiePizza(ingredientFactory);
 			break;
 		}
 		return pizza;

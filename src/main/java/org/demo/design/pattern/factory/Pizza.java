@@ -1,25 +1,22 @@
 package org.demo.design.pattern.factory;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public abstract class Pizza {
 
 	String name;
-	String dough;
-	String sauce;
+	Dough dough;
+	Sauce sauce;
+	Veggies[] veggies;
+	Cheese cheese;
+	Pepperoni pepperoni;
+	Clams clam;
 
 	List<String> toppins = new ArrayList<>();
 
-	public void prepare() {
-		System.out.println("Preparing " + name);
-		System.out.println("Tossing dough..." + dough);
-		System.out.println("Adding sauce..." + sauce);
-		System.out.println("Adding toppings:");
-		for (int i = 0; i < toppins.size(); i++) {
-			System.out.println(" " + toppins.get(i));
-		}
-	}
+	abstract void prepare();
 
 	public void bake() {
 		System.out.println("Bake for 25 minutes at 350");
@@ -35,6 +32,18 @@ public abstract class Pizza {
 
 	public String getName() {
 		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	@Override
+	public String toString() {
+		return "Pizza [name=" + name + ", dough=" + dough + ", sauce=" + sauce
+				+ ", veggies=" + Arrays.toString(veggies) + ", cheese="
+				+ cheese + ", pepperoni=" + pepperoni + ", clam=" + clam
+				+ ", toppins=" + toppins + "]";
 	}
 
 }
