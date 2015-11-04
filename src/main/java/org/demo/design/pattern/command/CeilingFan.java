@@ -9,15 +9,19 @@ public class CeilingFan {
 	}
 
 	void high() {
+		System.out.println(name + " ceiling fan is on high");
 	}
 
 	void medium() {
+		System.out.println(name + " ceiling fan is on medium");
 	}
 
 	void low() {
+		System.out.println(name + " ceiling fan is on low");
 	}
 
 	void off() {
+		System.out.println(name + " ceiling fan is off");
 	}
 
 	void getSpeed() {

@@ -1,10 +1,10 @@
 package org.demo.design.pattern.command;
 
-public class StereoWithCDCommand implements Command {
+public class StereoOnWithCDCommand implements Command {
 
 	Stereo stereo;
 
-	public StereoWithCDCommand(Stereo stereo) {
+	public StereoOnWithCDCommand(Stereo stereo) {
 		this.stereo = stereo;
 	}
 

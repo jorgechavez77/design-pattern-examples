@@ -9,14 +9,15 @@ public class Stereo {
 	}
 
 	void on() {
-		System.out.println("Stereo is on");
+		System.out.println(name + " stereo is on");
 	}
 
 	void off() {
+		System.out.println(name + " stereo is off");
 	}
 
 	void setCd() {
-		System.out.println("Stereo CD has been set");
+		System.out.println(name + " stereo is set for CD input");
 	}
 
 	void setDvd() {
@@ -26,7 +27,7 @@ public class Stereo {
 	}
 
 	void setVolume(int volume) {
-		System.out.println("Stereo Volume set to " + volume);
+		System.out.println(name + " stereo Volume set to " + volume);
 	}
 
 	@Override
