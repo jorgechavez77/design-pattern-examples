@@ -1,19 +1,13 @@
 package org.demo.design.pattern.factory.abstractfactory;
 
 import org.demo.design.pattern.factory.BlackOlives;
-import org.demo.design.pattern.factory.Cheese;
-import org.demo.design.pattern.factory.Clams;
-import org.demo.design.pattern.factory.Dough;
 import org.demo.design.pattern.factory.EggPlant;
 import org.demo.design.pattern.factory.FrozenClam;
 import org.demo.design.pattern.factory.Mozarella;
-import org.demo.design.pattern.factory.Pepperoni;
 import org.demo.design.pattern.factory.PlumTomatoSauce;
-import org.demo.design.pattern.factory.Sauce;
 import org.demo.design.pattern.factory.SlicedPepperoni;
 import org.demo.design.pattern.factory.Spinach;
 import org.demo.design.pattern.factory.ThinCrustDough;
-import org.demo.design.pattern.factory.Veggies;
 
 public class ChicagoPizzaIngredientFactory implements PizzaIngredientFactory {
 

@@ -1,5 +1,7 @@
 package org.demo.design.pattern.factory;
 
+import org.demo.design.pattern.factory.abstractfactory.Sauce;
+
 public class MarinaraSauce implements Sauce {
 
 }

@@ -1,20 +1,14 @@
 package org.demo.design.pattern.factory.abstractfactory;
 
-import org.demo.design.pattern.factory.Cheese;
-import org.demo.design.pattern.factory.Clams;
-import org.demo.design.pattern.factory.Dough;
 import org.demo.design.pattern.factory.FreshClams;
 import org.demo.design.pattern.factory.Garlic;
 import org.demo.design.pattern.factory.MarinaraSauce;
 import org.demo.design.pattern.factory.Mashroom;
 import org.demo.design.pattern.factory.Onion;
-import org.demo.design.pattern.factory.Pepperoni;
 import org.demo.design.pattern.factory.RedPepper;
 import org.demo.design.pattern.factory.ReggianoCheese;
-import org.demo.design.pattern.factory.Sauce;
 import org.demo.design.pattern.factory.SlicedPepperoni;
 import org.demo.design.pattern.factory.ThinCrustDough;
-import org.demo.design.pattern.factory.Veggies;
 
 public class NewYorkPizzaIngredientFactory implements PizzaIngredientFactory {
 
