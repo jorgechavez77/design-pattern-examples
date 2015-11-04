@@ -1,6 +1,5 @@
 package org.demo.design.pattern.factory.abstractfactory;
 
-
 public interface PizzaIngredientFactory {
 
 	Dough createDough();

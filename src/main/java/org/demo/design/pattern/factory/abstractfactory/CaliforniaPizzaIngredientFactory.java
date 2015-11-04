@@ -1,42 +1,35 @@
 package org.demo.design.pattern.factory.abstractfactory;
 
-
 public class CaliforniaPizzaIngredientFactory implements PizzaIngredientFactory {
 
 	@Override
 	public Dough createDough() {
-		// TODO Auto-generated method stub
-		return null;
+		return new ThinCrustDough();
 	}
 
 	@Override
 	public Sauce createSauce() {
-		// TODO Auto-generated method stub
-		return null;
+		return new MarinaraSauce();
 	}
 
 	@Override
 	public Cheese createCheese() {
-		// TODO Auto-generated method stub
-		return null;
+		return new Mozarella();
 	}
 
 	@Override
 	public Veggies[] createVeggies() {
-		// TODO Auto-generated method stub
-		return null;
+		return new Veggies[] { new Onion(), new BlackOlives(), new RedPepper() };
 	}
 
 	@Override
 	public Pepperoni createPepperoni() {
-		// TODO Auto-generated method stub
-		return null;
+		return new SlicedPepperoni();
 	}
 
 	@Override
 	public Clams createClam() {
-		// TODO Auto-generated method stub
-		return null;
+		return new FreshClams();
 	}
 
 }
