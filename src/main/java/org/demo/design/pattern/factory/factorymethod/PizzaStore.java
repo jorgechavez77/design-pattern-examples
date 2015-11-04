@@ -1,6 +1,5 @@
 package org.demo.design.pattern.factory.factorymethod;
 
-import org.demo.design.pattern.factory.Pizza;
 
 public abstract class PizzaStore {
 

@@ -1,10 +1,5 @@
 package org.demo.design.pattern.factory.factorymethod;
 
-import org.demo.design.pattern.factory.CheesePizza;
-import org.demo.design.pattern.factory.ClamPizza;
-import org.demo.design.pattern.factory.PepperoniPizza;
-import org.demo.design.pattern.factory.Pizza;
-import org.demo.design.pattern.factory.VeggiePizza;
 import org.demo.design.pattern.factory.abstractfactory.ChicagoPizzaIngredientFactory;
 import org.demo.design.pattern.factory.abstractfactory.PizzaIngredientFactory;
 

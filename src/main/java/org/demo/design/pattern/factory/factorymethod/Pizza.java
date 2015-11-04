@@ -1,4 +1,4 @@
-package org.demo.design.pattern.factory;
+package org.demo.design.pattern.factory.factorymethod;
 
 import java.util.ArrayList;
 import java.util.Arrays;
