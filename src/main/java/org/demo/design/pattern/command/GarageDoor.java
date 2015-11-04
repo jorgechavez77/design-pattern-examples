@@ -2,6 +2,12 @@ package org.demo.design.pattern.command;
 
 public class GarageDoor {
 
+	String name;
+
+	public GarageDoor(String name) {
+		this.name = name;
+	}
+
 	void up() {
 		System.out.println("Garage Door is Open");
 	}

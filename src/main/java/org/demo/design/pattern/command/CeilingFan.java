@@ -1,15 +1,31 @@
 package org.demo.design.pattern.command;
 
-public interface CeilingFan {
+public class CeilingFan {
 
-	void high();
+	String name;
 
-	void medium();
+	public CeilingFan(String name) {
+		this.name = name;
+	}
 
-	void low();
+	void high() {
+	}
 
-	void off();
+	void medium() {
+	}
 
-	void getSpeed();
+	void low() {
+	}
+
+	void off() {
+	}
+
+	void getSpeed() {
+	}
+
+	@Override
+	public String toString() {
+		return "CeilingFan [name=" + name + "]";
+	}
 
 }

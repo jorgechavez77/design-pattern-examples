@@ -1,17 +1,37 @@
 package org.demo.design.pattern.command;
 
-public interface Stereo {
+public class Stereo {
 
-	void on();
+	String name;
 
-	void off();
+	public Stereo(String name) {
+		this.name = name;
+	}
 
-	void setCd();
+	void on() {
+		System.out.println("Stereo is on");
+	}
 
-	void setDvd();
+	void off() {
+	}
 
-	void setRadio();
+	void setCd() {
+		System.out.println("Stereo CD has been set");
+	}
 
-	void setVolume();
+	void setDvd() {
+	}
+
+	void setRadio() {
+	}
+
+	void setVolume(int volume) {
+		System.out.println("Stereo Volume set to " + volume);
+	}
+
+	@Override
+	public String toString() {
+		return "Stereo [name=" + name + "]";
+	}
 
 }

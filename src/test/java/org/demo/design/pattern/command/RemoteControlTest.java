@@ -7,8 +7,8 @@ public class RemoteControlTest {
 	@Test
 	public void test() {
 		SimpleRemoteControl remote = new SimpleRemoteControl();
-		Light light = new Light();
-		GarageDoor garageDoor = new GarageDoor();
+		Light light = new Light("Kitchen");
+		GarageDoor garageDoor = new GarageDoor("");
 		Command lightOn = new LightOnCommand(light);
 		Command garageDoorOpen = new GarageDoorOpenCommand(garageDoor);
 
