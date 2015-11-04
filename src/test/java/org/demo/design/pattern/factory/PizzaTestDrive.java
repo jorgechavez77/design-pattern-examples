@@ -1,9 +1,9 @@
 package org.demo.design.pattern.factory;
 
-import org.demo.design.pattern.factory.factorymethod.ChicagoPizzaStore;
-import org.demo.design.pattern.factory.factorymethod.NewYorkPizzaStore;
-import org.demo.design.pattern.factory.factorymethod.Pizza;
-import org.demo.design.pattern.factory.factorymethod.PizzaStore;
+import org.demo.design.pattern.factorymethod.ChicagoPizzaStore;
+import org.demo.design.pattern.factorymethod.NewYorkPizzaStore;
+import org.demo.design.pattern.factorymethod.Pizza;
+import org.demo.design.pattern.factorymethod.PizzaStore;
 import org.junit.Test;
 
 public class PizzaTestDrive {
