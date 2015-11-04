@@ -1,5 +1,6 @@
 package org.demo.design.pattern.command;
 
+@Deprecated
 public class SimpleRemoteControl {
 
 	Command slot;

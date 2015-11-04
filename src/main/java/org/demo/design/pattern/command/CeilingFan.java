@@ -2,34 +2,46 @@ package org.demo.design.pattern.command;
 
 public class CeilingFan {
 
-	String name;
+	public static final int HIGH = 3;
+	public static final int MEDIUM = 2;
+	public static final int LOW = 1;
+	public static final int OFF = 0;
 
-	public CeilingFan(String name) {
-		this.name = name;
+	String location;
+	int speed;
+
+	public CeilingFan(String location) {
+		this.location = location;
+		speed = OFF;
 	}
 
-	void high() {
-		System.out.println(name + " ceiling fan is on high");
+	public void high() {
+		speed = HIGH;
+		System.out.println(location + " ceiling fan is on high");
 	}
 
-	void medium() {
-		System.out.println(name + " ceiling fan is on medium");
+	public void medium() {
+		speed = MEDIUM;
+		System.out.println(location + " ceiling fan is on medium");
 	}
 
-	void low() {
-		System.out.println(name + " ceiling fan is on low");
+	public void low() {
+		speed = LOW;
+		System.out.println(location + " ceiling fan is on low");
 	}
 
-	void off() {
-		System.out.println(name + " ceiling fan is off");
+	public void off() {
+		speed = OFF;
+		System.out.println(location + " ceiling fan is off");
 	}
 
-	void getSpeed() {
+	public int getSpeed() {
+		return speed;
 	}
 
 	@Override
 	public String toString() {
-		return "CeilingFan [name=" + name + "]";
+		return "CeilingFan [name=" + location + "]";
 	}
 
 }

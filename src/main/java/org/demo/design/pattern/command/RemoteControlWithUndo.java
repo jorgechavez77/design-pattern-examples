@@ -1,12 +1,12 @@
 package org.demo.design.pattern.command;
 
+public class RemoteControlWithUndo {
 
-public class RemoteControl {
+	private Command[] onCommands;
+	private Command[] offCommands;
+	private Command undoCommand;
 
-	Command[] onCommands;
-	Command[] offCommands;
-
-	public RemoteControl() {
+	public RemoteControlWithUndo() {
 		onCommands = new Command[7];
 		offCommands = new Command[7];
 
@@ -15,6 +15,7 @@ public class RemoteControl {
 			onCommands[i] = noCommand;
 			offCommands[i] = noCommand;
 		}
+		undoCommand = noCommand;
 	}
 
 	public void setCommand(int slot, Command onCommand, Command offCommand) {
@@ -22,12 +23,18 @@ public class RemoteControl {
 		this.offCommands[slot] = offCommand;
 	}
 
-	public void onButtonWasPressed(int slot) {
+	public void onButtonWasPushed(int slot) {
 		onCommands[slot].execute();
+		undoCommand = onCommands[slot];
 	}
 
-	public void offButtonWasPressed(int slot) {
+	public void offButtonWasPushed(int slot) {
 		offCommands[slot].execute();
+		undoCommand = offCommands[slot];
+	}
+
+	public void undoButtonWasPushed() {
+		undoCommand.undo();
 	}
 
 	@Override

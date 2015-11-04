@@ -6,7 +6,7 @@ public class RemoteLoader {
 
 	@Test
 	public void test() {
-		RemoteControl remoteControl = new RemoteControl();
+		RemoteControlWithUndo remoteControl = new RemoteControlWithUndo();
 
 		Light livingRoomLight = new Light("Living Room");
 		Light kitchenLight = new Light("Kitchen");
@@ -37,17 +37,38 @@ public class RemoteLoader {
 		System.out.println(remoteControl);
 
 		System.out.println("slot 0");
-		remoteControl.onButtonWasPressed(0);
-		remoteControl.offButtonWasPressed(0);
+		remoteControl.onButtonWasPushed(0);
+		remoteControl.offButtonWasPushed(0);
 		System.out.println("slot 1");
-		remoteControl.onButtonWasPressed(1);
-		remoteControl.offButtonWasPressed(1);
+		remoteControl.onButtonWasPushed(1);
+		remoteControl.offButtonWasPushed(1);
 		System.out.println("slot 2");
-		remoteControl.onButtonWasPressed(2);
-		remoteControl.offButtonWasPressed(2);
+		remoteControl.onButtonWasPushed(2);
+		remoteControl.offButtonWasPushed(2);
 		System.out.println("slot 3");
-		remoteControl.onButtonWasPressed(3);
-		remoteControl.offButtonWasPressed(3);
+		remoteControl.onButtonWasPushed(3);
+		remoteControl.offButtonWasPushed(3);
+	}
+
+	@Test
+	public void test2() {
+		RemoteControlWithUndo remoteControl = new RemoteControlWithUndo();
+
+		Light livingRoomLight = new Light("Living Room");
+
+		Command livingRoomLightOn = new LightOnCommand(livingRoomLight);
+		Command livingRoomLightOff = new LightOffCommand(livingRoomLight);
+
+		remoteControl.setCommand(0, livingRoomLightOn, livingRoomLightOff);
+
+		remoteControl.onButtonWasPushed(0);
+		remoteControl.offButtonWasPushed(0);
+		System.out.println(remoteControl);
+		remoteControl.undoButtonWasPushed();
+		remoteControl.offButtonWasPushed(0);
+		remoteControl.onButtonWasPushed(0);
+		System.out.println(remoteControl);
+		remoteControl.undoButtonWasPushed();
 	}
 
 }
