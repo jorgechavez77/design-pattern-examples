@@ -1,13 +1,21 @@
 package org.demo.design.pattern.command;
 
-public interface Hottube {
+public class Hottube {
 
-	void circulate();
+	void circulate() {
+		System.out.println("Hottube is circulating");
+	}
 
-	void jetsOn();
+	void jetsOn() {
+		System.out.println("Hottube jet is on");
+	}
 
-	void jetsOff();
+	void jetsOff() {
+		System.out.println("Hottube jet is off");
+	}
 
-	void setTemperature();
+	void setTemperature(int temperature) {
+		System.out.println("Hottube temperature set to " + temperature);
+	}
 
 }

@@ -1,13 +1,27 @@
 package org.demo.design.pattern.command;
 
-public interface TV {
+public class TV {
 
-	void on();
+	String name;
 
-	void off();
+	public TV(String name) {
+		this.name = name;
+	}
 
-	void setInputChannel();
+	void on() {
+		System.out.println(name + " TV is on");
+	}
 
-	void setVolume();
+	void off() {
+		System.out.println(name + " TV is off");
+	}
+
+	void setInputChannel(int channel) {
+		System.out.println(name + " TV is set to channel " + channel);
+	}
+
+	void setVolume(int volume) {
+		System.out.println(name + " TV volume is set to " + volume);
+	}
 
 }

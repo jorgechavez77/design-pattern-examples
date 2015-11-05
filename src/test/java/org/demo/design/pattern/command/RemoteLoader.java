@@ -97,4 +97,38 @@ public class RemoteLoader {
 		remoteControl.undoButtonWasPushed();
 	}
 
+	@Test
+	public void test4() {
+		Light light = new Light("Living Room");
+		TV tv = new TV("Living Room");
+		Stereo stereo = new Stereo("Living Room");
+		Hottube hottube = new Hottube();
+
+		LightOnCommand lightOn = new LightOnCommand(light);
+		Command stereoOn = new StereoOnCommand(stereo);
+		Command tvOn = new TVOnCommand(tv);
+		Command hottubeOn = new HottubeOnCommand(hottube);
+
+		Command lightOff = new LightOffCommand(light);
+		Command stereoOff = new StereoOffCommand(stereo);
+		Command tvOff = new TVOffCommand(tv);
+		Command hottubeOff = new HottubeOffCommand(hottube);
+
+		Command[] partyOn = { lightOn, stereoOn, tvOn, hottubeOn };
+		Command[] partyOff = { lightOff, stereoOff, tvOff, hottubeOff };
+
+		MacroCommand partyMacroOn = new MacroCommand(partyOn);
+		MacroCommand partyMacroOff = new MacroCommand(partyOff);
+
+		RemoteControlWithUndo remoteControl = new RemoteControlWithUndo();
+
+		remoteControl.setCommand(0, partyMacroOn, partyMacroOff);
+
+		System.out.println(remoteControl);
+		System.out.println("---Pusing macro on---");
+		remoteControl.onButtonWasPushed(0);
+		System.out.println("---Pusing macro off---");
+		remoteControl.offButtonWasPushed(0);
+	}
+
 }
