@@ -1,5 +1,6 @@
 package org.demo.design.pattern.adapter;
 
+import org.junit.Assert;
 import org.junit.Test;
 
 public class DuckTestDrive {

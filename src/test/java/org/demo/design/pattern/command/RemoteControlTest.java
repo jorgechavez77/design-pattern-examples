@@ -1,5 +1,6 @@
 package org.demo.design.pattern.command;
 
+import org.junit.Assert;
 import org.junit.Test;
 
 public class RemoteControlTest {
