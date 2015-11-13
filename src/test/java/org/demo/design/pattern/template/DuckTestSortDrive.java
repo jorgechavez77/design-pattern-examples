@@ -1,7 +1,8 @@
-package org.demo.design.pattern.template.cp;
+package org.demo.design.pattern.template;
 
 import java.util.Arrays;
 
+import org.demo.design.pattern.template.example.Duck;
 import org.junit.Test;
 
 public class DuckTestSortDrive {

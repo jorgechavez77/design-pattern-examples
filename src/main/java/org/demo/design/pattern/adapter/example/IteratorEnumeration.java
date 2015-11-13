@@ -1,4 +1,4 @@
-package org.demo.design.pattern.adapter.it;
+package org.demo.design.pattern.adapter.example;
 
 import java.util.Enumeration;
 import java.util.Iterator;

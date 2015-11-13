@@ -1,10 +1,11 @@
-package org.demo.design.pattern.decorator.io;
+package org.demo.design.pattern.decorator;
 
 import java.io.BufferedInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 
+import org.demo.design.pattern.decorator.example.LowerCaseInputStream;
 import org.junit.Test;
 
 public class InputTest {

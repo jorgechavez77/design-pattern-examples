@@ -1,4 +1,4 @@
-package org.demo.design.pattern.template.cp;
+package org.demo.design.pattern.template.example;
 
 import java.awt.Graphics;
 

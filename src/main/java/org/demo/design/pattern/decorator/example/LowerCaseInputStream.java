@@ -1,4 +1,4 @@
-package org.demo.design.pattern.decorator.io;
+package org.demo.design.pattern.decorator.example;
 
 import java.io.FilterInputStream;
 import java.io.IOException;
