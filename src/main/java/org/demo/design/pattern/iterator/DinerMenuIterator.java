@@ -1,6 +1,8 @@
 package org.demo.design.pattern.iterator;
 
-public class DinerMenuIterator implements Iterator {
+import java.util.Iterator;
+
+public class DinerMenuIterator implements Iterator<MenuItem> {
 
 	MenuItem[] items;
 	int position = 0;
@@ -10,7 +12,7 @@ public class DinerMenuIterator implements Iterator {
 	}
 
 	@Override
-	public Object next() {
+	public MenuItem next() {
 		MenuItem menuItem = items[position];
 		position++;
 		return menuItem;
@@ -23,6 +25,11 @@ public class DinerMenuIterator implements Iterator {
 		} else {
 			return true;
 		}
+	}
+
+	@Override
+	public void remove() {
+		throw new UnsupportedOperationException();
 	}
 
 }

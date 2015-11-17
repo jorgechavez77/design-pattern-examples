@@ -1,7 +1,9 @@
 package org.demo.design.pattern.iterator;
 
-public interface Menu {
+import java.util.Iterator;
 
-	Iterator createIterator();
+public interface Menu<E> {
+
+	Iterator<E> createIterator();
 
 }

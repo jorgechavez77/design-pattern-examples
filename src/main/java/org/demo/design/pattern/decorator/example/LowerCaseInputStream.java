@@ -6,7 +6,7 @@ import java.io.InputStream;
 
 public class LowerCaseInputStream extends FilterInputStream {
 
-	protected LowerCaseInputStream(InputStream in) {
+	public LowerCaseInputStream(InputStream in) {
 		super(in);
 	}
 

@@ -1,8 +1,9 @@
 package org.demo.design.pattern.iterator;
 
+import java.util.Iterator;
 import java.util.List;
 
-public class PancakeHouseMenuIterator implements Iterator {
+public class PancakeHouseMenuIterator implements Iterator<MenuItem> {
 
 	List<MenuItem> menuItems;
 	int position;
@@ -12,7 +13,7 @@ public class PancakeHouseMenuIterator implements Iterator {
 	}
 
 	@Override
-	public Object next() {
+	public MenuItem next() {
 		MenuItem menuItem = menuItems.get(position);
 		position++;
 		return menuItem;
@@ -25,6 +26,11 @@ public class PancakeHouseMenuIterator implements Iterator {
 		} else {
 			return true;
 		}
+	}
+
+	@Override
+	public void remove() {
+		throw new UnsupportedOperationException();
 	}
 
 }
